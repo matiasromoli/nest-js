@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/profile.css" />
+    <meta charset="UTF-8" />
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <img src="./image/<%- user.image %>" />
+        <p><%- user.name %></p>
+        <% carritos.forEach(function (c) { %>
+        <li>
+          <a href="http://localhost:8080/carrito/<%- c.id %>"> Carrito </a>
+        </li>
+        <% }) %>
+        <li><a href="/logout"> Logout </a></li>
+      </ul>
+    </header>
+    <div class="conteiner"><%- include ("../models/productos.ejs") %></div>
+  </body>
+  <script></script>
+</html>
